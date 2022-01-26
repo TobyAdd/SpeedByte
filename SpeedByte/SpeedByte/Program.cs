@@ -5,7 +5,6 @@ using MemoryHacking;
 using System.Globalization;
 using System.Diagnostics;
 using System.IO;
-using System.Threading;
 
 namespace SpeedByte
 {
@@ -14,7 +13,6 @@ namespace SpeedByte
         public static void Main(string[] args)
         {
             Console.WriteLine("SpeedByte by TobyAdd");
-            Thread.Sleep(1000);
             if (args.Length < 4)
             {
                 Console.WriteLine($"Usage: {new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location).Name} <process> <module> <offset> <data[0]> <data[1]> <data[...]>");
@@ -69,10 +67,7 @@ namespace SpeedByte
                 Console.WriteLine("Failed to write bytes: " + ex.Message);
                 return;
             }
-
-
             Console.WriteLine("Success");
-            Thread.Sleep(1000);
 
         }
     }
