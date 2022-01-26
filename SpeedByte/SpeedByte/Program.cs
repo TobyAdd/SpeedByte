@@ -13,7 +13,6 @@ namespace SpeedByte
     {
         public static void Main(string[] args)
         {
-            Console.Clear();
             Console.WriteLine("SpeedByte by TobyAdd");
             Thread.Sleep(1000);
             if (args.Length < 4)
